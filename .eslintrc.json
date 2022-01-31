@@ -1,0 +1,78 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jquery": true,
+    "jasmine": true,
+    "mocha": true,
+    "qunit": true
+  },
+  "overrides": [
+    {
+      "files": [ "**/*.js", "**/*.jsx", "**/*.es6", "**/*.mjs", "**/*.mdx" ],
+      "extends": "eslint:recommended",
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true,
+          "globalReturn": true
+        },
+        "sourceType": "script"
+      },
+      "rules": {
+        "no-undef": "off",
+        "no-fallthrough": "off",
+        "no-mixed-spaces-and-tabs": "off",
+        "no-console": "off",
+        "indent": "off",
+        "semi": "off",
+        "no-tabs": "off",
+        "no-redeclare": "off",
+        "curly": "off",
+        "dot-location": "off",
+        "getter-return": "off",
+        "yoda": "off",
+        "require-atomic-updates": "off",
+        "no-with": "off",
+        "no-prototype-builtins": "off",
+        "no-misleading-character-class": "off",
+        "no-async-promise-executor": "off",
+        "no-import-assign": "off"
+      }
+    },
+    {
+      "files": [ "**/*.ts", "**/*.tsx" ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [ "@typescript-eslint" ],
+      "rules": {
+        "@typescript-eslint/adjacent-overload-signatures": "error",
+        "guard-for-in": "error",
+        "no-unused-labels": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "no-caller": "error",
+        "no-cond-assign": "error",
+        "constructor-super": "error",
+        "@typescript-eslint/no-empty-interface": "error",
+        "no-eval": "error",
+        "@typescript-eslint/prefer-namespace-keyword": "error",
+        "no-trailing-spaces": [
+          "error",
+          {
+            "skipBlankLines": true,
+            "ignoreComments": true
+          }
+        ],
+        "@typescript-eslint/unified-signatures": "error",
+        "use-isnan": "error"
+      }
+    }
+  ],
+  "globals": {
+    "ActiveXObject": true,
+    "XDomainRequest": true,
+    "ScriptEngine": true,
+    "WSH": true,
+    "WScript": true,
+    "DocumentTouch": true
+  }
+}

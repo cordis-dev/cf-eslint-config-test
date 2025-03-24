@@ -1,7 +1,2 @@
-// should not report trailing-comma
-// should report trailing-whitespace
-@NgModule({ 
-  exports: [ RouterModule ],
-  imports: [ RouterModule.forRoot(routes, { enableTracing: true }) ],
-})
-export class AppModule { }
+// should report no-explicit-any
+function greet(): Array<any> {}
